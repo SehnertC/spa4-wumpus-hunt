@@ -9,6 +9,8 @@
 #include <vector>
 #include <cstdlib> // For rand and srand
 #include <ctime>   // For seeding rand
+#include <windows.h>
+#include <stdlib.h>
 #include "Room.h"
 #include "Hazard.h"
 
@@ -23,6 +25,7 @@ void MagicOrb::use(char direction) {
 
         std::vector<Point> orbPath;
         std::vector<std::vector<char>> displayBuffer = createInitialBuffer();
+        std::system("cls");
         renderInitialBuffer(displayBuffer);
         std::cout << std::endl; // Add padding
 
@@ -97,25 +100,15 @@ void MagicOrb::renderInitialBuffer(const std::vector<std::vector<char>>& buffer)
             std::cout << " " << cell << " ";
         }
 
-        // Display key for the first few rows
         if (i == 0) {
             std::cout << "  Key:";
         } else if (i == 1) {
-            std::cout << "  + : Player";
+            std::cout << "  + : Player | T : Trapdoor";
         } else if (i == 2) {
-            std::cout << "  W : Wumpus";
+            std::cout << "  W : Wumpus | A : Arrow";
         } else if (i == 3) {
-            std::cout << "  P : Pit";
-        } else if (i == 4) {
-            std::cout << "  B : Bat";
-        } else if (i == 5) {
-            std::cout << "  T : Trapdoor";
-        } else if (i == 6) {
-            std::cout << "  A : Arrow";
-        } else if (i == 7) {
-            std::cout << "  O : Magic Orb";
+            std::cout << "  P : Pit    | O : Magic Orb";
         }
-
         std::cout << std::endl;
     }
     std::cout.flush();
