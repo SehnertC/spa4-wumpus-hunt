@@ -1,0 +1,3 @@
+C:/Users/sehnertc/CLionProjects/spa4-wumpus-hunt/src/cmake-build-debug/CMakeFiles/Spa4.dir
+C:/Users/sehnertc/CLionProjects/spa4-wumpus-hunt/src/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/sehnertc/CLionProjects/spa4-wumpus-hunt/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir
