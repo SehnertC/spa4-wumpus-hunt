@@ -23,6 +23,7 @@ void MagicOrb::use(char direction) {
 
         std::vector<Point> orbPath;
         std::vector<std::vector<char>> displayBuffer = createInitialBuffer();
+        std::system("cls");
         renderInitialBuffer(displayBuffer);
         std::cout << std::endl; // Add padding
 
